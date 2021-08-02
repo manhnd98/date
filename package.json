@@ -1,5 +1,5 @@
 {
-    "name": "@tinkoff/angular-open-source-starter",
+    "name": "@acomici/date",
     "version": "1.0.0",
     "scripts": {
         "ng": "ng",
@@ -23,20 +23,25 @@
         "release:patch": "npm run release -- --release-as patch",
         "release:minor": "npm run release -- --release-as minor",
         "release:major": "npm run release -- --release-as major",
-        "publish": "npm run build:all && npm run publish:all"
+        "publish": "npm run build:all && npm run publish:all",
+        "build:all": "npm run build:date",
+        "publish:all": "npm run publish:date",
+        "build:date": "ng run date:build",
+        "test:date": "ng run date:test",
+        "test:date:watch": "ng run date:test --watch=true",
+        "publish:date": "npm publish ./dist/date"
     },
-    "description": "This is a template project to develop, create and open-source Angular libraries with demos",
-    "keywords": ["angular", "ng", "workspace", "library", "starter", "tinkoff"],
+    "description": "Date picker component for Angular",
+    "keywords": ["angular", "ng", "workspace", "library", "date"],
     "license": "Apache-2.0",
     "author": {
-        "name": "Roman Sedov",
-        "email": "79601794011@ya.ru",
-        "url": "http://marsibarsi.me/"
+        "name": "Nguyen Duc Manh",
+        "email": "manhnd.jin@gmail.com"
     },
-    "contributors": ["Alex Inkin <alexander@inkin.ru>"],
-    "repository": "https://github.com/TinkoffCreditSystems/angular-library-starter",
-    "bugs": "https://github.com/TinkoffCreditSystems/angular-library-starter/issues",
-    "homepage": "https://github.com/TinkoffCreditSystems/angular-library-starter#README",
+    "contributors": [""],
+    "repository": "https://github.com/manhnd98/date",
+    "bugs": "https://github.com/manhnd98/date/issues",
+    "homepage": "https://github.com/manhnd98/date#README",
     "schematics": "./schematics/collection.json",
     "dependencies": {
         "@angular/animations": "^9.1.13",
