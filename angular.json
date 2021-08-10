@@ -21,7 +21,14 @@
                         "polyfills": "projects/demo/src/polyfills.ts",
                         "tsConfig": "tsconfig.json",
                         "aot": false,
-                        "assets": ["projects/demo/src/favicon.ico"],
+                        "assets": [
+                            "projects/demo/src/favicon.ico",
+                            {
+                                "glob": "**/*",
+                                "input": "node_modules/@taiga-ui/icons/src",
+                                "output": "assets/taiga-ui/icons"
+                            }
+                        ],
                         "styles": ["projects/demo/src/styles.css"],
                         "scripts": []
                     },
@@ -125,12 +132,24 @@
             "projectType": "library",
             "root": "projects/date",
             "sourceRoot": "projects/date/src",
+            "prefix": "aco",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-ng-packagr:build",
                     "options": {
                         "tsConfig": "projects/date/tsconfig.lib.json",
-                        "project": "projects/date/ng-package.json"
+                        "project": "projects/date/ng-package.json",
+                        "styles": [
+                            "node_modules/@taiga-ui/core/styles/taiga-ui-global.less",
+                            "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less"
+                        ],
+                        "assets": [
+                            {
+                                "glob": "**/*",
+                                "input": "node_modules/@taiga-ui/icons/src",
+                                "output": "assets/taiga-ui/icons"
+                            }
+                        ]
                     }
                 },
                 "test": {

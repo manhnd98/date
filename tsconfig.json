@@ -18,7 +18,8 @@
         "typeRoots": ["node_modules/@types"],
         "lib": ["es2018", "dom"],
         "paths": {
-            "date": ["projects/date/src/public-api"]
+            "@acomici/date": ["projects/date/src/public-api"],
+            "@acomici/date/*": ["projects/date/src/*"]
         }
     }
 }
