@@ -1,9 +1,17 @@
+import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {TuiLetModule} from '@taiga-ui/cdk';
+import {TuiFocusableModule, TuiLetModule, TuiPreventDefaultModule} from '@taiga-ui/cdk';
+import {TuiButtonModule} from '@taiga-ui/core';
 import {AcoPrimitiveRightSpinComponent} from './primitive-right-spin-button.component';
 
 @NgModule({
-    imports: [TuiLetModule],
+    imports: [
+        CommonModule,
+        TuiLetModule,
+        TuiPreventDefaultModule,
+        TuiFocusableModule,
+        TuiButtonModule,
+    ],
     exports: [AcoPrimitiveRightSpinComponent],
     declarations: [AcoPrimitiveRightSpinComponent],
     providers: [],

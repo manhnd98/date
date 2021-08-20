@@ -1,0 +1,38 @@
+<div
+    #wrapper
+    *tuiLet="spinTexts$ | async as texts"
+    class="wrapper"
+    tuiPreventDefault="mousedown"
+    [tuiFocusable]="computedFocusable"
+    (tuiFocusedChange)="onFocused($event)"
+    (tuiFocusVisibleChange)="onFocusVisible($event)"
+    (keydown.arrowUp)="onLeftClick()"
+    (keydown.arrowDown)="onRightClick()"
+>
+    <span class="content">
+        <ng-content></ng-content>
+    </span>
+    <button
+        tuiIconButton
+        icon="tuiIconChevronUp"
+        type="button"
+        size="xs"
+        appearance=""
+        [title]="texts[0]"
+        [focusable]="false"
+        class="arrow"
+        (click)="onUpClick()"
+    ></button>
+
+    <button
+        tuiIconButton
+        icon="tuiIconChevronDown"
+        type="button"
+        size="xs"
+        appearance=""
+        [title]="texts[0]"
+        [focusable]="false"
+        class="arrow"
+        (click)="onDownClick()"
+    ></button>
+</div>

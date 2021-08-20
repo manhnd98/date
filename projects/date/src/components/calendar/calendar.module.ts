@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core';
+import {TuiRootModule} from '@taiga-ui/core';
+import {AcoPrimitiveRightSpinModule} from './../primitive-right-spin-button/primitive-right-spin-button.module';
 import {AcoCalendarComponent} from './calendar.component';
 
-import {TuiPrimitiveSpinButtonModule} from '@taiga-ui/core';
-
 @NgModule({
-    imports: [TuiPrimitiveSpinButtonModule],
+    imports: [AcoPrimitiveRightSpinModule, TuiRootModule],
     exports: [AcoCalendarComponent],
     declarations: [AcoCalendarComponent],
     providers: [],

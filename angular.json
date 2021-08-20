@@ -29,7 +29,10 @@
                                 "output": "assets/taiga-ui/icons"
                             }
                         ],
-                        "styles": ["projects/demo/src/styles.css"],
+                        "styles": [
+                            "projects/demo/src/styles.css",
+                            "projects/date/src/styles/variables.less"
+                        ],
                         "scripts": []
                     },
                     "configurations": {
@@ -139,10 +142,7 @@
                     "options": {
                         "tsConfig": "projects/date/tsconfig.lib.json",
                         "project": "projects/date/ng-package.json",
-                        "styles": [
-                            "node_modules/@taiga-ui/core/styles/taiga-ui-global.less",
-                            "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less"
-                        ],
+                        "styles": ["projects/date/src/style.scss"],
                         "assets": [
                             {
                                 "glob": "**/*",
